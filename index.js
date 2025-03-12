@@ -34,7 +34,7 @@ app.get('/listSchools',(req,res)=>{
 });
 
 // Endpoint to add data of new school
-app.post('/listSchools',(req,res)=>{    
+app.post('/addSchool',(req,res)=>{    
     try {
         const {name, address, latitude, longitude} = req.body;
 
