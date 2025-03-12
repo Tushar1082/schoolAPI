@@ -20,8 +20,8 @@ app.get('/listSchools',(req,res)=>{
     }
     
     conn.query("SELECT * FROM school", (err, result)=>{
-        if(err) return res.status(500).json({err: "Database error"});
-
+        if(err) return res.status(500).json({msg: "Database error", err:err});
+        
         //Calculate and sort schools by distance
         const sortedSchools = result.map((school)=>({
             ...school,
