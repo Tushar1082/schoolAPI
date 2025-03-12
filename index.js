@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-//Endpoint to find and return a school details from a list.
+//Endpoint to find and return a school details from a list according to user details.
 app.get('/listSchools',(req,res)=>{
     const {latitude, longitude} = req.query; // user location details
 
